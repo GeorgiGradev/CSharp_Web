@@ -1,2 +1,2 @@
 # CSharp-Web
-C# Web Basics and ASP.NET Core from Software University Training Path
+C# Web Basics and ASP.NET Core Course
