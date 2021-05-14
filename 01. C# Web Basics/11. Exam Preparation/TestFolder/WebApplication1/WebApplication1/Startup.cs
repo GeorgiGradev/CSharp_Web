@@ -27,6 +27,7 @@ namespace WebApplication1
             }
 
             string test = "";
+            string test3 = "third change";
             app.UseRouting();
 
             app.UseEndpoints(endpoints =>
