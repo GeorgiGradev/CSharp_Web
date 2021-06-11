@@ -16,6 +16,7 @@
     using MoiteRecepti.Data.Models;
     using MoiteRecepti.Data.Repositories;
     using MoiteRecepti.Data.Seeding;
+    using MoiteRecepti.Services.Data;
     using MoiteRecepti.Services.Mapping;
     using MoiteRecepti.Services.Messaging;
     using MoiteRecepti.Web.ViewModels;
@@ -62,6 +63,7 @@
 
             // Application services
             services.AddTransient<IEmailSender, NullMessageSender>();
+            services.AddTransient<IGetCountsService, GetCountsService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

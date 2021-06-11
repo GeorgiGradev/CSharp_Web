@@ -1,6 +1,6 @@
-﻿namespace MoiteRecepti.Data.Models
+﻿
+namespace MoiteRecepti.Data.Models
 {
-
     using System.Collections.Generic;
 
     using MoiteRecepti.Data.Common.Models;

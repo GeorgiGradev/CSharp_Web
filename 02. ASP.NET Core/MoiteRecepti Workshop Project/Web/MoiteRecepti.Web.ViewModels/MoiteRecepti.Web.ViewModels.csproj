@@ -23,4 +23,8 @@
     <ProjectReference Include="..\..\Services\MoiteRecepti.Services.Mapping\MoiteRecepti.Services.Mapping.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Administration\" />
+  </ItemGroup>
+
 </Project>

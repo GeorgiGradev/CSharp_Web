@@ -48,8 +48,6 @@
         private static async Task<int> SandboxCode(SandboxOptions options, IServiceProvider serviceProvider)
         {
             var sw = Stopwatch.StartNew();
-
-  
             Console.WriteLine(sw.Elapsed);
             return await Task.FromResult(0);
         }
