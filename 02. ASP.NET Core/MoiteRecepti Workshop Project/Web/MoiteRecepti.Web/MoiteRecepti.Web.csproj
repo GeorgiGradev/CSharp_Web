@@ -14,6 +14,10 @@
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="5.0.6">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="5.0.2" />
     <PackageReference Include="Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation" Version="5.0.6" />
     <PackageReference Include="BuildBundlerMinifier" Version="3.2.449" />
@@ -35,5 +39,9 @@
     <ProjectReference Include="..\..\Services\MoiteRecepti.Services\MoiteRecepti.Services.csproj" />
     <ProjectReference Include="..\MoiteRecepti.Web.Infrastructure\MoiteRecepti.Web.Infrastructure.csproj" />
     <ProjectReference Include="..\MoiteRecepti.Web.ViewModels\MoiteRecepti.Web.ViewModels.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Areas\Administration\Views\Dashboard\" />
   </ItemGroup>
 </Project>
