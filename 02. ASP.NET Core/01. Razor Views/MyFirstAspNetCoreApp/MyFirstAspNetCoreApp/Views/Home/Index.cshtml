@@ -1,0 +1,62 @@
+﻿@model IndexViewModel
+@using MyFirstAspNetCoreApp.Services
+@using MyFirstAspNetCoreApp.ViewModels.Home
+@inject IShortStringService shortStringService
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+@* ВАРИАНТ 3 чрез Tag Helper*@
+<partial name="_HomePageStart" model="Model"/>
+
+
+
+ @*ВАРИАНТ 1 чрез Html Helper и Async 
+@await Html.PartialAsync("_HomePageStart")
+ ВАРИАНТ 2 чрез Html Helper, но има нужда от Async, за да е бързо
+@Html.Partial("_HomePageStart")*@
+
+
+
+
+
+
+
+<table bootstrap-table="">
+    @for (int i = 0; i < 10; i++)
+    {
+        <tr><td>@i</td></tr>
+    }
+</table>
+
+
+<vc:"И" на View Component"></vc:"И това предизвиква извикването на този метод">
+
+
+<form>
+    <textarea asp-for="Description"></textarea>
+    <input asp-for="Name" />
+    <input asp-for="Year" />
+</form>
+
+
+@Html.ActionLink("PRivacy page", "Privacy", "Home")
+<hr />
+@Html.EditorForModel()
+
+@section Links
+    {
+    <li class="nav-item">
+        <a class="nav-link text-dark" href="https://bing.com">Bing</a>
+    </li>
+}
+
+
+<div class="text-center">
+    <h1 class="display-4">Welcome, @Model.Name.</h1>
+    <h2>It @Model.Year year.</h2>
+    <p>We have @Model.UsersCount users.</p>
+    <p>Processors: @Model.ProcessorsCount</p>
+    <p>Id: @Model.Id</p>
+    <p>@shortStringService.GetShort(@Model.Description, 130)</p>
+</div>
