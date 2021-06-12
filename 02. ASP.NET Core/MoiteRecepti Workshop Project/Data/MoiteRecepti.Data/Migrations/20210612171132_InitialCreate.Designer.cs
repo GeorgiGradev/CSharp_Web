@@ -10,8 +10,8 @@ using MoiteRecepti.Data;
 namespace MoiteRecepti.Data.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20210612155325_AddNewColumnsForRecipeAndImage")]
-    partial class AddNewColumnsForRecipeAndImage
+    [Migration("20210612171132_InitialCreate")]
+    partial class InitialCreate
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {

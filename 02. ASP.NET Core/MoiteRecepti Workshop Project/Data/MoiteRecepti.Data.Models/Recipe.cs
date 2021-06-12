@@ -21,7 +21,11 @@
 
         public TimeSpan CookingTime { get; set; }
 
+        public string OriginalUrl { get; set; }
+
         public int PortionCount { get; set; }
+
+        public int OriginalId { get; set; }
 
         public string AddedByUserId { get; set; }
 

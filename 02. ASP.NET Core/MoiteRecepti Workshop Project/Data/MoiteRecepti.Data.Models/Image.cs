@@ -21,5 +21,7 @@
 
         // The content of the image is in the file system
         public string Extension { get; set; }
+
+        public string Url { get; set; }
     }
 }

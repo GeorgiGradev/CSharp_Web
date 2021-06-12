@@ -292,6 +292,9 @@ namespace MoiteRecepti.Data.Migrations
                     b.Property<int>("RecipeId")
                         .HasColumnType("int");
 
+                    b.Property<string>("Url")
+                        .HasColumnType("nvarchar(max)");
+
                     b.HasKey("Id");
 
                     b.HasIndex("AddedByUserId");
@@ -362,6 +365,12 @@ namespace MoiteRecepti.Data.Migrations
                         .HasColumnType("datetime2");
 
                     b.Property<string>("Name")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("OriginalId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("OriginalUrl")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<int>("PortionCount")
