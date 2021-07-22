@@ -1,0 +1,49 @@
+﻿@using MyFirstAspNetCoreApp.ViewModels.Recipes
+@using MyFirstAspNetCoreApp.Models.Enums
+@model AddRecipesInputModel 
+<h1>
+    Add recipe
+</h1>
+
+<form method="post" class="col-md-6" enctype="multipart/form-data">
+
+    <div class="form-group">
+        <label asp-for="Image"></label>
+        <input asp-for="Image" class="form-control" />
+        <span asp-validation-for="Image" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Type"></label>
+        <select asp-for="Type" class="form-control" asp-items="@Html.GetEnumSelectList<RecipeType>()"></select>
+        <span asp-validation-for="Type" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Name"></label>
+        <input asp-for="Name" class="form-control" />
+        <span asp-validation-for="Name" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Description"></label>
+        <textarea asp-for="Description" class="form-control"></textarea>
+        <span asp-validation-for="Description" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Quantity"></label>
+        <input asp-for="Quantity" class="form-control" />
+        <span asp-validation-for="Quantity" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Year"></label>
+        <input asp-for="Year" class="form-control">
+        <span asp-validation-for="Year" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="CreatedOn"></label>
+        <input asp-for="CreatedOn" class="form-control" />
+        <span asp-validation-for="CreatedOn" class="text-danger"></span>
+    </div>
+
+    <input type="submit" class="btn btn-primary" />
+</form>
+
+<partial name="_ValidationScriptsPartial" />
